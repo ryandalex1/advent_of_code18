@@ -1,0 +1,9 @@
+import csv
+
+total_sum = 0
+
+with open('../input/1_1_input.csv', newline='') as input_csv:
+    sequence_reader = csv.reader(input_csv, dialect='excel')
+    for row in sequence_reader:
+        total_sum += int(row[0])
+        print(total_sum)
